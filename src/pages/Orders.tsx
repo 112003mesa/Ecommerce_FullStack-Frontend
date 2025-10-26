@@ -8,7 +8,7 @@ const Orders = () => {
   const shop = useContext(ShopContext);
   if (!shop) return null;
 
-  const { backendURL, token, currency, navigate } = shop;
+  const { backendURL, token, currency } = shop;
   const [orderData, setOrderData] = useState<
     (OrderItem & {
       status: string;

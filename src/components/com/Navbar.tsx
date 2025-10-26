@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { assets } from "../assets/frontend_assets/assets";
 import { useContext, useState, useEffect } from "react";
 import { ShopContext } from "../../context/ShopContext";
@@ -9,7 +9,6 @@ const Navbar = () => {
   const { setShowSearch, getCartCount, navigate, token, setToken, setCartItem } =
     useContext(ShopContext)!;
 
-  // ✅ منع سكرول الصفحة لما القائمة مفتوحة
   useEffect(() => {
     if (visible) {
       document.body.style.overflow = "hidden";
